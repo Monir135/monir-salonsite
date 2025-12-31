@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ================= BASIC SEO ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclat Salon — Luxury Hair Studio in Jakarta</title>
+    <meta name="description"
+        content="Éclat Salon & Studio offers luxury haircuts, color, balayage, keratin treatments, and bridal styling in Jakarta. Book your premium salon experience today.">
+    <meta name="keywords"
+        content="Éclat Salon, Jakarta salon, luxury haircuts, balayage, keratin treatment, bridal styling, hair color, beauty studio">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Éclat Salon & Studio">
+    <link rel="canonical" href="https://monir-salonsite.vercel.app/">
+    <meta name="theme-color" content="#c9a24d">
+
+    <!-- ================= OPEN GRAPH (SOCIAL MEDIA PREVIEW) ================= -->
+    <meta property="og:title" content="Éclat Salon — Luxury Hair Studio in Jakarta">
+    <meta property="og:description"
+        content="Luxury color, signature cuts, balayage, and bridal styling. Book your appointment at Éclat Salon & Studio.">
+    <meta property="og:image" content="https://monir-salonsite.vercel.app/images/preview-salon.png">
+    <meta property="og:url" content="https://monir-salonsite.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ID">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Éclat Salon & Studio – Luxury Hair & Beauty">
+
+    <!-- ================= OPTIONAL ADDITIONAL META ================= -->
+    <meta name="format-detection" content="telephone=no"> <!-- prevent automatic phone link detection on mobile -->
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "@id": "https://monir-salonsite.vercel.app/#beautysalon",
+  "name": "Éclat Salon & Studio",
+  "image": "https://monir-salonsite.vercel.app/images/preview-salon.png",
+  "url": "https://monir-salonsite.vercel.app/",
+  "telephone": "+6281882030323",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Irwan Team Hairdesign",
+    "addressLocality": "Jakarta",
+    "addressRegion": "DKI Jakarta",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -6.200000,
+    "longitude": 106.816666
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "11:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/",
+    "https://www.facebook.com/"
+  ]
+}
+</script>
+
+
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="salon.css">
+
+    <!-- QR & PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+    <!-- Booking JS -->
+    <script src="salon.js" defer></script>
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="logo">ÉCLAT</div>
+                <div class="sub">Salon & Studio</div>
+            </div>
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#team">Stylists</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#location">Location</a>
+                <a href="#booking" class="btn-ghost">Book</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-image" style="background-image:url('images/barbar-hero.jpg');"></div>
+            <div class="hero-inner container">
+                <div class="hero-left">
+                    <h1>Luxury Color & Signature Cuts</h1>
+                    <p class="lead">Elevated service, editorial results — a salon experience clients love to show off.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#" class="btn-primary" id="startBooking">Booking Form</a>
+                        <a href="https://wa.me/918822030323?phone=918822030323&text=Hello%20Éclat!%20I%20want%20to%20book%20an%20appointment"
+                            target="_blank" class="btn-gold">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="hero-right" id="booking">
+                    <div class="hero-card">
+                        <h3 id="reserveTitle">Quick Reserve</h3>
+                        <p class="subtle">Get instant confirmation and downloadable ticket.</p>
+                        <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST" class="form-grid"
+                            autocomplete="off">
+                            <input type="hidden" name="access_key" value="08036011-9e72-4aac-a92c-37c06349ab21">
+                            <input type="hidden" name="reference" id="bookingRef">
+
+                            <label class="field">
+                                <span>Service</span>
+                                <select name="service" required>
+                                    <option value="">Select service</option>
+                                    <option value="Signature Cut">Signature Cut</option>
+                                    <option value="Color & Balayage">Color & Balayage</option>
+                                    <option value="Keratin Treatment">Keratin Treatment</option>
+                                    <option value="Bridal Styling">Bridal Styling</option>
+                                </select>
+                            </label>
+
+                            <label class="field">
+                                <span>Stylist (optional)</span>
+                                <select name="stylist">
+                                    <option value="">No preference</option>
+                                    <option value="Maya">Maya</option>
+                                    <option value="Rin">Rin</option>
+                                    <option value="Arif">Arif</option>
+                                </select>
+                            </label>
+
+                            <label class="field">
+                                <span>Name</span>
+                                <input type="text" name="name" placeholder="Full name" required>
+                            </label>
+
+                            <label class="field">
+                                <span>Phone / WhatsApp</span>
+                                <input type="tel" name="phone" placeholder="+62..." required>
+                            </label>
+
+                            <div class="row">
+                                <label class="field half">
+                                    <span>Date</span>
+                                    <input type="date" name="date" required>
+                                </label>
+                                <label class="field half">
+                                    <span>Time</span>
+                                    <input type="time" name="time" required>
+                                </label>
+                            </div>
+
+                            <button class="btn-primary" type="submit">Confirm Booking</button>
+                        </form>
+                        <div id="bookingMessage" class="booking-message" role="status" aria-live="polite"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="section services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="grid">
+                    <div class="service-card">
+                        <h3>Signature Cut</h3>
+                        <p>Precision cutting tailored to your style and personality.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Color & Balayage</h3>
+                        <p>Luxury coloring techniques for a vibrant, natural look.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Keratin Treatment</h3>
+                        <p>Smooth, frizz-free hair with professional keratin care.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Bridal Styling</h3>
+                        <p>Elegant and timeless looks for your special day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM / STYLISTS -->
+        <section id="team" class="section team">
+            <div class="container">
+                <h2>Meet Our Stylists</h2>
+                <div class="grid">
+                    <div class="team-card">
+                        <img src="images/nails.jpg" alt="Maya">
+                        <h3>Maya</h3>
+                        <p>Expert in modern cuts and color trends.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/hair-treat.jpg" alt="Rin">
+                        <h3>Rin</h3>
+                        <p>Specializes in balayage and creative coloring.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/precise.jpg" alt="Arif">
+                        <h3>Arif</h3>
+                        <p>Master of precision and classic styles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="section gallery">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="grid gallery-grid">
+                    <img src="images/tools.jpg" alt="Gallery 1">
+                    <img src="images/tools3.jpg" alt="Gallery 2">
+                    <img src="images/tools4.jpg" alt="Gallery 3">
+                    <img src="images/hero3.jpg" alt="Gallery 4">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- LOCATION / MAP -->
+        <section id="location" class="section location">
+            <div class="location-wrapper">
+                <!-- Map -->
+                <iframe class="location-map"
+                    src="https://www.google.com/maps?q=Irwan%20Team%20Hairdesign%20Jakarta&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" aria-label="Éclat Salon location map">
+                </iframe>
+
+                <!-- Overlay Content -->
+                <div class="location-overlay">
+                    <h2>Find Us</h2>
+
+                    <p class="address">
+                        Éclat Salon & Studio<br>
+                        Jakarta, Indonesia
+                    </p>
+
+                    <a class="btn-primary"
+                        href="https://www.google.com/maps/dir/?api=1&destination=Irwan%20Team%20Hairdesign%20Jakarta"
+                        target="_blank" rel="noopener">
+                        Get Directions & Distance
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div>© <span id="year"></span> Éclat Salon</div>
+                <div class="socials">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
