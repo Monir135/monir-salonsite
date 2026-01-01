@@ -557,3 +557,40 @@ body {
     }
 }
 
+
+
+@media (max-width: 768px) {
+    .hero-image {
+        width: 100%;         /* take full parent width */
+        max-width: 100%;     /* prevent overflow */
+        margin: 0;           /* remove any default margin */
+        left: 0;             /* reset position */
+        transform: none;     /* reset transform */
+    }
+
+    .hero-inner {
+        padding: 0 16px;     /* only inner content padding */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .location-wrapper {
+        width: 100%;         /* full width of screen */
+        max-width: 100%;
+        margin: 0;           /* remove extra margin */
+        left: 0;             /* reset position */
+        transform: none;     /* remove centering transform */
+    }
+
+    .location-map {
+        width: 100%;         /* full width map */
+        max-width: 100%;
+    }
+
+    .location-overlay {
+        width: 90%;          /* overlay stays centered */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
