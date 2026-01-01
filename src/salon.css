@@ -16,6 +16,9 @@
     --input-h: 46px;
 }
 
+html, body {
+    overflow-x: hidden; /* prevents horizontal scroll */
+}
 
 
 
@@ -355,25 +358,19 @@ body {
 
 /* hero image */
 .hero-image {
-    width: 100%; /* full width of parent container */
-    max-width: 100vw; /* prevent overflow */
+    width: 100%;         /* full width of parent container */
+    max-width: 100%;     /* prevent overflow */
     height: clamp(520px, 40vw, 950px);
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 0;
-    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
-    position: relative;
-    z-index: 0;
-    margin: 0; /* remove extra spacing */
+    margin: 0;           /* remove extra spacing */
 }
 
 @media (max-width: 768px) {
     .hero-image {
-        width: 100vw; /* full viewport width */
-        margin-left: calc(-50vw + 50%); /* ignores container padding */
+        width: 100%;       /* full width of parent container */
+        margin-left: 0;    /* reset any negative margin */
         height: 360px;
-        border-radius: 0;
     }
 }
 
@@ -538,9 +535,10 @@ body {
 
 @media (max-width: 768px) {
     .location-wrapper {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%); /* ignores container padding */
-        height: 420px;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+       
     }
 }
 
