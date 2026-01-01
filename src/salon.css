@@ -97,15 +97,14 @@ a {
   padding-bottom: 80px;
 }
 
-
 .hero-image {
   width: 100vw;
-  height: 480px;
+  aspect-ratio: 3 / 2;
   background-size: cover;
   background-position: center;
   margin-left: calc(-50vw + 50%);
-  border-radius: 0;
 }
+
 
 
 .hero-inner {
@@ -300,7 +299,7 @@ button.btn-primary:focus-visible {
   }
 
   .hero-image {
-    height: 340px;
+    aspect-ratio: 4 / 3;
     
   }
 
@@ -325,6 +324,10 @@ button.btn-primary:focus-visible {
 
   .location-wrapper {
     height: 420px;
+  }
+
+    .hero-image {
+    aspect-ratio: 4 / 5;
   }
 }
 
