@@ -94,20 +94,35 @@ a {
 /* ================= HERO ================= */
 .hero {
   background: #0b0b0f;
-  padding: 80px 0;
+  padding-bottom: 80px;
 }
 
 
-
-/* HERO IMAGE */
 .hero-image {
-  width: 100%;
+  width: 100vw;
   height: 480px;
   background-size: cover;
   background-position: center;
-  border-radius: 18px;
-  margin-bottom: 60px;
+  margin-left: calc(-50vw + 50%);
+  border-radius: 0;
 }
+
+
+.hero-inner {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+
+
+
+
+
+
+
 
 /* FORCE FULL WIDTH HERO ON MOBILE */
 @media (max-width: 768px) {
@@ -118,12 +133,6 @@ a {
   }
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
-  align-items: start;
-}
 
 /* HERO LEFT */
 .hero-left h1 {
@@ -292,7 +301,7 @@ button.btn-primary:focus-visible {
 
   .hero-image {
     height: 340px;
-    margin-bottom: 40px;
+    
   }
 
   .hero-right {
