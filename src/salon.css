@@ -168,6 +168,25 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
+button.btn-primary {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background: var(--gold-dark);
+}
+
+button.btn-primary:focus-visible {
+  outline: 2px solid var(--gold-dark);
+  outline-offset: 3px;
+}
+
+
+
 
 .btn-primary {
   background: var(--gold);
