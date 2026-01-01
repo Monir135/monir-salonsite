@@ -16,9 +16,6 @@
     --input-h: 46px;
 }
 
-html, body {
-    overflow-x: hidden; /* prevents horizontal scroll */
-}
 
 
 
@@ -404,15 +401,14 @@ body {
 /* Hero content below the image */
 .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 420px;
-    /* two columns */
+    grid-template-columns: 1fr min(420px, 100%);
+    /* ensures second column never exceeds screen */
     gap: 32px;
-    /* bottom padding */
     align-items: start;
     z-index: 2;
-    margin-top: 0;
-    /* remove negative margin */
+    margin: 0 auto;
 }
+
 
 /* Hero left and right */
 .hero-left,
@@ -540,6 +536,14 @@ body {
         margin-left: 0;
        
     }
+    .location-overlay {
+    width: 90%;
+    max-width: 360px;
+    padding: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 }
 
 /* Fixed header scroll offset */
