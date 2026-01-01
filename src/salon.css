@@ -9,11 +9,20 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   background: #0b0b0f;
   color: #f3f3f3;
 }
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
 
 img {
   max-width: 100%;
@@ -47,12 +56,22 @@ a {
 
 /* ================= HEADER ================= */
 .site-header {
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background: rgba(11, 11, 15, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+
+/* Push the page content below the fixed header */
+main {
+ padding-top: var(--header-height);
+}
+
+
+
 
 .header-inner {
   display: flex;
@@ -95,6 +114,8 @@ a {
 .hero {
   background: #0b0b0f;
   padding-bottom: 80px;
+   margin-top: 0; /* remove if any margin pushing it up */
+  padding-top: 25px; /* optional, fine-tune spacing */
 }
 
 .hero-image {
@@ -103,7 +124,10 @@ a {
   background-size: cover;
   background-position: center;
   margin-left: calc(-50vw + 50%);
+  margin-top: 0; /* ensure top aligns below header */
+  border-radius: 0;
 }
+
 
 
 
@@ -408,6 +432,6 @@ button.btn-primary:focus-visible {
     padding: 20px;
     bottom: 20px;
   }
-}
+}   
 
 
