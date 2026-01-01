@@ -5,13 +5,15 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: 'Inter', sans-serif;
   background: #0b0b0f;
   color: #f3f3f3;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -43,7 +45,7 @@ a {
   --text-muted: #b5b5b5;
   --radius: 14px;
   --max-width: 1200px;
-   --header-height: 72px;
+  --header-height: 72px;
 }
 
 /* ================= CONTAINER ================= */
@@ -67,7 +69,7 @@ a {
 
 /* Push the page content below the fixed header */
 main {
- padding-top: var(--header-height);
+  padding-top: var(--header-height);
 }
 
 
@@ -114,8 +116,10 @@ main {
 .hero {
   background: #0b0b0f;
   padding-bottom: 80px;
-   margin-top: 0; /* remove if any margin pushing it up */
-  padding-top: 25px; /* optional, fine-tune spacing */
+  margin-top: 0;
+  /* remove if any margin pushing it up */
+  padding-top: 25px;
+  /* optional, fine-tune spacing */
 }
 
 .hero-image {
@@ -124,7 +128,8 @@ main {
   background-size: cover;
   background-position: center;
   margin-left: calc(-50vw + 50%);
-  margin-top: 0; /* ensure top aligns below header */
+  margin-top: 0;
+  /* ensure top aligns below header */
   border-radius: 0;
 }
 
@@ -137,12 +142,8 @@ main {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: start;
+  margin-bottom: 0;
 }
-
-
-
-
-
 
 
 
@@ -153,8 +154,21 @@ main {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     border-radius: 0;
+    aspect-ratio: 4 / 3;
+    /* adjust proportion for smaller screens */
+  }
+
+  .section {
+    padding: 60px 0;
   }
 }
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
 
 
 /* HERO LEFT */
@@ -184,12 +198,12 @@ main {
 }
 
 .hero-card {
-  background: rgba(18,18,24,0.95);
+  background: rgba(18, 18, 24, 0.95);
   border-radius: var(--radius);
   padding: 28px;
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
 /* ================= BUTTONS ================= */
@@ -200,6 +214,7 @@ main {
   font-size: 14px;
   font-weight: 600;
 }
+
 button.btn-primary {
   border: none;
   outline: none;
@@ -237,7 +252,7 @@ button.btn-primary:focus-visible {
 
 .section h2 {
   font-family: 'Playfair Display', serif;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -254,6 +269,14 @@ button.btn-primary:focus-visible {
   border-radius: var(--radius);
   padding: 24px;
   text-align: center;
+  margin: 0;
+}
+
+
+.service-card p,
+.team-card p {
+  margin: 0;
+  /* uniform spacing inside cards */
 }
 
 .team-card img {
@@ -286,7 +309,7 @@ button.btn-primary:focus-visible {
   left: 50%;
   bottom: 30px;
   transform: translateX(-50%);
-  background: rgba(18,18,24,0.95);
+  background: rgba(18, 18, 24, 0.95);
   padding: 24px 28px;
   border-radius: var(--radius);
   text-align: center;
@@ -296,7 +319,7 @@ button.btn-primary:focus-visible {
 /* ================= FOOTER ================= */
 .site-footer {
   padding: 28px 0;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-inner {
@@ -320,11 +343,12 @@ button.btn-primary:focus-visible {
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 40px;
+    margin-bottom: 0;
   }
 
   .hero-image {
     aspect-ratio: 4 / 3;
-    
+
   }
 
   .hero-right {
@@ -350,7 +374,7 @@ button.btn-primary:focus-visible {
     height: 420px;
   }
 
-    .hero-image {
+  .hero-image {
     aspect-ratio: 4 / 5;
   }
 }
@@ -432,6 +456,4 @@ button.btn-primary:focus-visible {
     padding: 20px;
     bottom: 20px;
   }
-}   
-
-
+}
